@@ -116,4 +116,10 @@ contMenu.addEventListener('mouseleave', (event) => {
 logo.addEventListener('mouseover', function(){
     dropMenu.forEach(item => item.classList.add("hidden"));
     dropMenuIn.forEach(item => item.classList.add("hidden"));
-})
+});
+
+let slider = document.querySelector(".slider");
+slider.addEventListener('click', function(){
+    dropMenu.forEach(item => item.classList.add("hidden"));
+    dropMenuIn.forEach(item => item.classList.add("hidden"));
+});
