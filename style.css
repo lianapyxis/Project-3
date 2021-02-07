@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.logo{
+    color: #e3a68b;
+    font-size: 12pt;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-left: 5%;
+}
+nav{
+    border-bottom: 1px solid rgb(77, 75, 75);
+    width: 100%;
+}
+.menu{
+
+    background-color: #898d8e;
+    display: flex;
+    flex-direction: row;
+    padding-left: 4%;
+}
+.menu a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 10pt;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 2%;
+    padding-right: 2%;
+    transition: all .3s;
+}
+.menu a:hover{
+    background-color: #7d9097;
+    color: #000;
+}
+.icon{
+    display: none;
+}
+.mobile{
+    display: none;
+}
+.home_menu.hidden,
+.about_menu.hidden,
+.services_menu.hidden,
+.testimonials_menu.hidden,
+.portfolio_menu.hidden,
+.contacts_menu.hidden{
+    opacity: 0;
+    height: 0;
+    transition: opacity .8s linear, height .8s linear;
+}
+.description.hidden,
+.list_menu.hidden{
+    display: none;
+}
+.image_menu.hidden{
+    height: 0;
+}
+.image_menu.hidden .img{
+    opacity: 0 !important;
+    height: 0;
+    padding-top: 0;
+    -webkit-transition: opacity 0s linear;
+    transition: opacity 0s linear;
+}
+.home_menu,
+.about_menu,
+.services_menu,
+.testimonials_menu,
+.portfolio_menu,
+.contacts_menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    background-color: #898d8e;
+    color: #fff;
+    font-size: 10pt;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 400px;
+    width: 90%;
+    margin-left: 2%;
+    z-index: 999;
+    transition: opacity .5s linear, height .1s linear;
+}
+.description{
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    padding-top: 75px;
+    padding-right: 10%;
+    border-right: 1px solid rgb(77, 75, 75);
+    margin: 0 0 0 auto;
+}
+.description p:first-child{
+    margin-bottom: 30px;
+}
+.list_menu{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    text-align: center;
+    border-right: 1px solid rgb(77, 75, 75);
+}
+.list_menu a{
+    width: 100%;
+    color: #fff;
+    text-decoration: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: auto;
+    transition: all .3s;
+}
+.list_menu a:hover{
+    background-color: #7d9097;
+    color: #000;
+}
+.image_menu{
+    opacity: 1;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: auto;
+}
+.image_menu .img{
+    width: 100%;
+    padding-top: 25px;
+    height: 250px;
+    background-image: url(img/front-view-of-desk-with-computer-and-chair.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transition: opacity 1s linear;
+    transition: opacity 1s linear;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px){
+    .menu a{
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+}
+
+
+
+@media screen and (max-width: 420px){
+    .desktop a{
+        display: none;
+    }
+    .mobile a:not(:first-child){
+        margin-left: -200%;
+        margin-top: -75px;
+        text-align: center;
+        visibility: hidden;
+        transition: margin-top .3s linear;
+    }
+    .menu.mobile a.icon{
+        display: block;
+        float: right;
+        width: 10%;
+        text-align: center;
+        margin-left: 2%;
+        z-index: 999;
+    }
+    .menu.mobile{
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+    }
+    .menu.responsive{
+        position: absolute;
+        width: 100%;
+    }
+    .mobile.responsive a{
+        margin-left: 0;
+        margin-top: 0;
+        display: block;
+        visibility: visible;
+    }
+}
