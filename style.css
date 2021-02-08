@@ -260,6 +260,7 @@ nav{
         text-align: center;
         margin-left: 2%;
         z-index: 999;
+        cursor: pointer;
     }
     .menu.mobile{
         display: flex;
@@ -275,6 +276,7 @@ nav{
         margin-top: 0;
         display: block;
         visibility: visible;
+        cursor: pointer;
     }
     .mobile_submenu{
         display: block;
@@ -333,6 +335,7 @@ nav{
         padding-top: 30px;
         padding-bottom: 30px;
         transition: background-color .3s, color .3s;
+        cursor: pointer;
     }
     .submenu__home a:hover,
     .submenu__about a:hover,
