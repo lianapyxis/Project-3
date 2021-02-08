@@ -5,7 +5,10 @@ icon.addEventListener("click", function() {
     menu.classList.toggle("responsive");
     if (menu.classList.contains("responsive")) {
         icon.innerHTML = "&#10060;";
-    } else icon.innerHTML = "&#9776;";
+    } else {
+        icon.innerHTML = "&#9776;";
+        document.querySelectorAll(".mobile_submenu > div").forEach(item => item.classList.add("subhidden"));
+    }
 });
 
 let logo = document.querySelector(".logo");
@@ -123,3 +126,65 @@ slider.addEventListener('click', function(){
     dropMenu.forEach(item => item.classList.add("hidden"));
     dropMenuIn.forEach(item => item.classList.add("hidden"));
 });
+
+let homeMob = document.querySelector(".menu__mobile a:nth-child(2)");
+let submenuHome = document.querySelector(".submenu__home");
+
+homeMob.addEventListener('click', function() {
+    if(submenuHome.classList.contains("subhidden") || submenuHome.children.classList.contains("subhidden")) {
+        submenuHome.classList.remove("subhidden");
+    };
+});
+
+let aboutMob = document.querySelector(".menu__mobile a:nth-child(3)");
+let submenuAbout = document.querySelector(".submenu__about");
+
+aboutMob.addEventListener('click', function() {
+    if(submenuAbout.classList.contains("subhidden") || submenuAbout.children.classList.contains("subhidden")) {
+        submenuAbout.classList.remove("subhidden");
+    };
+});
+
+let servicesMob = document.querySelector(".menu__mobile a:nth-child(4)");
+let submenuServices = document.querySelector(".submenu__services");
+
+servicesMob.addEventListener('click', function() {
+    if(submenuServices.classList.contains("subhidden") || submenuServices.children.classList.contains("subhidden")) {
+        submenuServices.classList.remove("subhidden");
+    };
+});
+
+let testimonialsMob = document.querySelector(".menu__mobile a:nth-child(5)");
+let submenuTestimonials = document.querySelector(".submenu__testimonials");
+
+testimonialsMob.addEventListener('click', function() {
+    if(submenuTestimonials.classList.contains("subhidden") || submenuTestimonials.children.classList.contains("subhidden")) {
+        submenuTestimonials.classList.remove("subhidden");
+    };
+});
+
+let portfolioMob = document.querySelector(".menu__mobile a:nth-child(6)");
+let submenuPortfolio = document.querySelector(".submenu__portfolio");
+
+portfolioMob.addEventListener('click', function() {
+    if(submenuPortfolio.classList.contains("subhidden") || submenuPortfolio.children.classList.contains("subhidden")) {
+        submenuPortfolio.classList.remove("subhidden");
+    };
+});
+
+let contactsMob = document.querySelector(".menu__mobile a:nth-child(7)");
+let submenuContacts = document.querySelector(".submenu__contacts");
+
+contactsMob.addEventListener('click', function() {
+    if(submenuContacts.classList.contains("subhidden") || submenuContacts.children.classList.contains("subhidden")) {
+        submenuContacts.classList.remove("subhidden");
+    };
+});
+
+let backbtn = document.querySelectorAll(".mobile_submenu > div > a:first-child");
+
+backbtn.forEach(item => item.addEventListener('click', function() {
+    document.querySelectorAll(".mobile_submenu > div").forEach(item => {
+        if (!item.classList.contains("subhidden")) item.classList.add("subhidden");
+    });
+}));

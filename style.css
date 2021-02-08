@@ -278,7 +278,8 @@ nav{
     }
     .mobile_submenu{
         display: block;
-        max-height: 0;
+        top: 50px;
+        transition: opacity .7s linear;
     }
     .submenu__home.subhidden,
     .submenu__about.subhidden,
@@ -287,8 +288,9 @@ nav{
     .submenu__portfolio.subhidden,
     .submenu__contacts.subhidden{
         height: 0px;
-        width: 0px;
-        margin-right: -200% !important;
+        margin-left: -200% !important;
+        transition: opacity .7s linear;
+        opacity: 0;
     }
     .submenu__home.subhidden a,
     .submenu__about.subhidden a,
@@ -297,7 +299,6 @@ nav{
     .submenu__portfolio.subhidden a,
     .submenu__contacts.subhidden a{
         height: 0px;
-        width: 0px;
         visibility: hidden;
     }
     .submenu__home,
@@ -314,7 +315,10 @@ nav{
         text-align: center;
         background-color: #898d8e;
         position: absolute;
-        padding-top: 40px;
+        margin-top: 75px;
+        z-index: 999;
+        opacity: 1;
+        transition: opacity .7s linear;
     }
     .submenu__home a,
     .submenu__about a,
@@ -339,4 +343,5 @@ nav{
         background-color: #7d9097;
         color: #000;
     }
+
 }
