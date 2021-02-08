@@ -238,6 +238,14 @@ nav{
         padding-left: 1%;
         padding-right: 1%;
     }
+    .home_menu,
+    .about_menu,
+    .services_menu,
+    .testimonials_menu,
+    .portfolio_menu,
+    .contacts_menu{
+        font-size: 8pt;
+    }
 }
 
 
