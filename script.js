@@ -187,4 +187,5 @@ backbtn.forEach(item => item.addEventListener('click', function() {
     document.querySelectorAll(".mobile_submenu > div").forEach(item => {
         if (!item.classList.contains("subhidden")) item.classList.add("subhidden");
     });
+    
 }));
